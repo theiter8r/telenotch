@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17C2876BEB5570F352F7B1EE /* PrompterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95A864FC16C3E3A035C065 /* PrompterState.swift */; };
 		63F6FBFC5519847174C6433C /* TelenotchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007BF5154B76736152AE18B /* TelenotchPanel.swift */; };
 		9E100B0F8FFEC5A605CA3260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CD7E99C4952969D72A87FF /* Assets.xcassets */; };
 		C4F2C9158F3AD1A6B4B15FC9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20024DA031FF6863759871 /* main.swift */; };
+		C5EA5CB9DF78F0FAABFA375F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4A33596D7D34E44B45F5D /* Theme.swift */; };
 		CFE7B39BC7B61F1FCDA05E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36CD7E99C4952969D72A87FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39B4A33596D7D34E44B45F5D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8007BF5154B76736152AE18B /* TelenotchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelenotchPanel.swift; sourceTree = "<group>"; };
 		8C20024DA031FF6863759871 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8F95A864FC16C3E3A035C065 /* PrompterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterState.swift; sourceTree = "<group>"; };
 		90B6193F59BB170E5E49709D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9B477F728632EF29FB4A3258 /* Telenotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telenotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +50,9 @@
 				36CD7E99C4952969D72A87FF /* Assets.xcassets */,
 				90B6193F59BB170E5E49709D /* Info.plist */,
 				8C20024DA031FF6863759871 /* main.swift */,
+				8F95A864FC16C3E3A035C065 /* PrompterState.swift */,
 				8007BF5154B76736152AE18B /* TelenotchPanel.swift */,
+				39B4A33596D7D34E44B45F5D /* Theme.swift */,
 			);
 			path = Telenotch;
 			sourceTree = "<group>";
@@ -123,7 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE7B39BC7B61F1FCDA05E40 /* AppDelegate.swift in Sources */,
+				17C2876BEB5570F352F7B1EE /* PrompterState.swift in Sources */,
 				63F6FBFC5519847174C6433C /* TelenotchPanel.swift in Sources */,
+				C5EA5CB9DF78F0FAABFA375F /* Theme.swift in Sources */,
 				C4F2C9158F3AD1A6B4B15FC9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

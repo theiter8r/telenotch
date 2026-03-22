@@ -7,10 +7,10 @@
 - [ ] Control bar (play/pause, speed, font size)
 - [ ] Edit mode toggle (read vs TextEditor)
 - [ ] Mirror mode
-- [ ] 5 color themes
+- [x] 5 color themes
 - [ ] Keyboard shortcuts (Space, arrows, R, Esc)
 - [ ] Top/bottom gradient fade on scroll area
 - [ ] Drag-and-drop / import .txt files
 - [ ] Visual polish and rounded corners
-- [ ] Persistence (UserDefaults for speed, fontSize, theme, script)
+- [x] Persistence (UserDefaults for speed, fontSize, theme, script)
 - [ ] Final cleanup and README

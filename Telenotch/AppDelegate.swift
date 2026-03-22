@@ -5,6 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem!
     private var panel: TelenotchPanel!
+    let state = PrompterState()    // single source of truth
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupStatusItem()
@@ -32,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             rootView: Rectangle()
                 .fill(Color(red: 0.1, green: 0.1, blue: 0.18))
                 .cornerRadius(16)
+                .environmentObject(state)
         )
         panel.contentViewController = placeholder
     }
