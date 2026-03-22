@@ -52,13 +52,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func showPanel() {
+    private func showPanel() {
         panel.positionBelowMenuBar()
         panel.orderFront(nil)
         installKeyboardMonitor()
     }
 
-    func hidePanel() {
+    private func hidePanel() {
         panel.orderOut(nil)
         removeKeyboardMonitor()
     }
@@ -80,25 +80,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
+    // MARK: - Key Codes
+
+    private enum Key {
+        static let space: UInt16  = 49
+        static let upArrow: UInt16 = 126
+        static let downArrow: UInt16 = 125
+        static let r: UInt16      = 15
+        static let escape: UInt16 = 53
+    }
+
     private func handleKeyDown(_ event: NSEvent) -> NSEvent? {
         switch event.keyCode {
-        case 49: // Space
+        case Key.space:
             if !state.isEditing {
                 state.isPlaying.toggle()
                 return nil
             }
-        case 126: // Up arrow
+        case Key.upArrow:
             state.speed = min(state.speed + 5, 120)
             return nil
-        case 125: // Down arrow
+        case Key.downArrow:
             state.speed = max(state.speed - 5, 5)
             return nil
-        case 15: // R key
+        case Key.r:
             if !state.isEditing {
                 state.reset()
                 return nil
             }
-        case 53: // Escape
+        case Key.escape:
             hidePanel()
             return nil
         default:
