@@ -1,8 +1,8 @@
 # Telenotch — Development Checklist
 
 - [x] Project scaffolding and git init
-- [ ] Menu bar agent setup (NSStatusItem, LSUIElement)
-- [ ] Floating NSPanel anchored below notch
+- [x] Menu bar agent setup (NSStatusItem, LSUIElement)
+- [x] Floating NSPanel anchored below notch
 - [ ] Teleprompter scrolling view (60fps timer)
 - [ ] Control bar (play/pause, speed, font size)
 - [ ] Edit mode toggle (read vs TextEditor)
