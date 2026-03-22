@@ -63,7 +63,8 @@ xcodebuild -project Telenotch.xcodeproj -scheme Telenotch build CODE_SIGNING_REQ
 
 ## Known Issues / Limitations
 
-_None at v1.0_
+- **Keyboard monitor teardown timing:** `showPanel`/`hidePanel` use `NSAnimationContext` fade (~0.14s). The keyboard event monitor is removed in the hide animation's completion handler (deferred ~0.14s after `hidePanel` is called). This is safe because the monitor closure contains a `panel.isVisible` guard — any keyDown events that slip through during the fade are ignored.
+- **Corner radius layering:** `.clipShape(RoundedRectangle(cornerRadius: 16))` is applied in `TeleprompterView` (not the deprecated `.cornerRadius` modifier). The underlying `NSPanel` layer also has `cornerRadius=16` and `masksToBounds=true`. Both layers are intentional — the SwiftUI clip handles the SwiftUI content, and the AppKit layer handles the native window chrome.
 
 ## Git
 

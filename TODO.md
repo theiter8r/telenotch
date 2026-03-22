@@ -13,4 +13,4 @@
 - [x] Drag-and-drop / import .txt files
 - [x] Visual polish and rounded corners
 - [x] Persistence (UserDefaults for speed, fontSize, theme, script)
-- [ ] Final cleanup and README
+- [x] Final cleanup and README
