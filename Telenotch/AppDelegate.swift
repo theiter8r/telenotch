@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             width: TelenotchPanel.width,
             height: TelenotchPanel.height
         )
+        hostingController.view.autoresizingMask = [.width, .height]
         panel.contentViewController = hostingController
     }
 
