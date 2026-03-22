@@ -31,9 +31,7 @@ struct TeleprompterView: View {
                 }
             }
         }
-        // TODO: .cornerRadius(16) is redundant with TelenotchPanel's layer cornerRadius=16
-        // and is deprecated in macOS 14. Replace with .clipShape(.rect(cornerRadius:)) in polish pass.
-        .cornerRadius(16)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         // Drag-and-drop support
         .onDrop(of: [UTType.fileURL, UTType.plainText], isTargeted: nil) { providers in
             handleDrop(providers: providers)

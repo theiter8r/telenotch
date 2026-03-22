@@ -54,13 +54,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func showPanel() {
         panel.positionBelowMenuBar()
+        panel.alphaValue = 0
         panel.orderFront(nil)
+        NSAnimationContext.runAnimationGroup { ctx in
+            ctx.duration = 0.18
+            ctx.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            panel.animator().alphaValue = 1
+        }
         installKeyboardMonitor()
     }
 
     private func hidePanel() {
-        panel.orderOut(nil)
-        removeKeyboardMonitor()
+        NSAnimationContext.runAnimationGroup({ ctx in
+            ctx.duration = 0.14
+            ctx.timingFunction = CAMediaTimingFunction(name: .easeIn)
+            panel.animator().alphaValue = 0
+        }, completionHandler: { [weak self] in
+            self?.panel.orderOut(nil)
+            self?.removeKeyboardMonitor()
+        })
     }
 
     // MARK: - Keyboard Monitor

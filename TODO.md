@@ -11,6 +11,6 @@
 - [x] Keyboard shortcuts (Space, arrows, R, Esc)
 - [x] Top/bottom gradient fade on scroll area
 - [x] Drag-and-drop / import .txt files
-- [ ] Visual polish and rounded corners
+- [x] Visual polish and rounded corners
 - [x] Persistence (UserDefaults for speed, fontSize, theme, script)
 - [ ] Final cleanup and README
