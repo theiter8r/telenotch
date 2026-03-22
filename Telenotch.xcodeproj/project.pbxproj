@@ -14,6 +14,7 @@
 		C4F2C9158F3AD1A6B4B15FC9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20024DA031FF6863759871 /* main.swift */; };
 		C5EA5CB9DF78F0FAABFA375F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4A33596D7D34E44B45F5D /* Theme.swift */; };
 		CFE7B39BC7B61F1FCDA05E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */; };
+		F9B054A0AB7A838ABA42C746 /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E80D7A50838C706B659BDB /* ControlBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		90B6193F59BB170E5E49709D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9B477F728632EF29FB4A3258 /* Telenotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telenotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8E80D7A50838C706B659BDB /* ControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -50,6 +52,7 @@
 			children = (
 				AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */,
 				36CD7E99C4952969D72A87FF /* Assets.xcassets */,
+				D8E80D7A50838C706B659BDB /* ControlBar.swift */,
 				90B6193F59BB170E5E49709D /* Info.plist */,
 				8C20024DA031FF6863759871 /* main.swift */,
 				8F95A864FC16C3E3A035C065 /* PrompterState.swift */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE7B39BC7B61F1FCDA05E40 /* AppDelegate.swift in Sources */,
+				F9B054A0AB7A838ABA42C746 /* ControlBar.swift in Sources */,
 				17C2876BEB5570F352F7B1EE /* PrompterState.swift in Sources */,
 				6685CB24180A7E9F985C151C /* ScrollingTextView.swift in Sources */,
 				63F6FBFC5519847174C6433C /* TelenotchPanel.swift in Sources */,
