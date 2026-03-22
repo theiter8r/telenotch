@@ -104,7 +104,6 @@ struct ControlBar: View {
 
     // MARK: - Helpers
 
-    @ViewBuilder
     private func toolButton(
         systemImage: String,
         active: Bool = false,
@@ -147,13 +146,14 @@ struct ControlBar: View {
         panel.begin { response in
             guard response == .OK, let url = panel.url else { return }
             do {
+                // TODO: Move file read to a background queue for large files (future polish)
                 let content = try String(contentsOf: url, encoding: .utf8)
                 DispatchQueue.main.async {
                     state.script = content
                     state.scrollOffset = 0
                 }
             } catch {
-                // File read failed — silently ignore for v1.0
+                // TODO: Surface a user-facing error alert in a future polish pass
             }
         }
     }
