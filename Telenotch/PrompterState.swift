@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 import SwiftUI
 
 class PrompterState: ObservableObject {
@@ -44,16 +43,13 @@ class PrompterState: ObservableObject {
         }
     }
     @Published var speed: Double {
-        didSet {
-            speed = min(max(speed, 5), 120)
-            UserDefaults.standard.set(speed, forKey: Keys.speed)
-        }
+        // Clamping is enforced by the slider's `in: 5...120` range in ControlBar.
+        // didSet only persists — no re-assignment to avoid triggering a second didSet.
+        didSet { UserDefaults.standard.set(speed, forKey: Keys.speed) }
     }
     @Published var fontSize: Double {
-        didSet {
-            fontSize = min(max(fontSize, 14), 48)
-            UserDefaults.standard.set(fontSize, forKey: Keys.fontSize)
-        }
+        // Clamping enforced by slider range 14...48 in ControlBar.
+        didSet { UserDefaults.standard.set(fontSize, forKey: Keys.fontSize) }
     }
     @Published var isMirrored: Bool = false
     @Published var isEditing: Bool = false {
