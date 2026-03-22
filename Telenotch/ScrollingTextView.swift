@@ -34,8 +34,10 @@ struct ScrollingTextView: View {
                     .scaleEffect(x: state.isMirrored ? -1 : 1, y: 1)
                     .offset(y: -state.scrollOffset)
                     .onPreferenceChange(TextHeightKey.self) { textHeight in
-                        let visibleHeight = outerGeo.size.height
-                        state.maxScrollOffset = max(0, textHeight - visibleHeight)
+                        // Dispatch to main thread: @Published mutations must happen on the main actor.
+                        DispatchQueue.main.async {
+                            state.maxScrollOffset = max(0, textHeight - outerGeo.size.height)
+                        }
                     }
 
                 // Top gradient overlay (rendered on top of clipped text)
@@ -76,15 +78,13 @@ struct ScrollingTextView: View {
     }
 
     private var textContent: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(state.script)
-                .font(.system(size: state.fontSize))
-                .foregroundColor(state.currentTheme.textColor)
-                .lineSpacing(8)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 24)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .textSelection(.disabled)
-        }
+        Text(state.script)
+            .font(.system(size: state.fontSize))
+            .foregroundColor(state.currentTheme.textColor)
+            .lineSpacing(8)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 24)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .textSelection(.disabled)
     }
 }
