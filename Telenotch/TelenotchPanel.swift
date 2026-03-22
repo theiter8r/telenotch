@@ -36,12 +36,12 @@ class TelenotchPanel: NSPanel {
         guard let screen = NSScreen.main else { return }
 
         let menuBarHeight = screen.frame.maxY - screen.visibleFrame.maxY
-        // Top of panel = bottom of menu bar minus 8pt breathing room
-        let panelTop = screen.frame.maxY - menuBarHeight - 8
+        // Flush against the bottom of the menu bar — hugs the notch
+        let panelTop = screen.frame.maxY - menuBarHeight
         let panelY = panelTop - TelenotchPanel.height
 
-        // Center horizontally, clamped so panel never overflows right edge
-        var panelX = screen.visibleFrame.midX - TelenotchPanel.width / 2
+        // Center on the physical screen midX so the panel sits under the notch
+        var panelX = screen.frame.midX - TelenotchPanel.width / 2
         let maxX = screen.visibleFrame.maxX - TelenotchPanel.width - 8
         panelX = min(panelX, maxX)
 

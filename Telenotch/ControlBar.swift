@@ -129,9 +129,12 @@ struct ControlBar: View {
             // Exiting edit — reset scroll, defer maxScrollOffset recompute so layout settles
             state.isEditing = false
             state.scrollOffset = 0
+            // Double-async: first hop exits the current layout pass, second hop
+            // triggers the PreferenceKey re-fire after the view tree has settled.
             DispatchQueue.main.async {
-                // Nudge SwiftUI to trigger a layout pass so PreferenceKey re-fires
-                state.objectWillChange.send()
+                DispatchQueue.main.async {
+                    state.objectWillChange.send()
+                }
             }
         } else {
             state.isEditing = true
