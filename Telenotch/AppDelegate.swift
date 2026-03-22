@@ -28,14 +28,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupPanel() {
         panel = TelenotchPanel()
 
-        // Placeholder view until TeleprompterView is wired in Task 6
-        let placeholder = NSHostingController(
-            rootView: Rectangle()
-                .fill(Color(red: 0.1, green: 0.1, blue: 0.18))
-                .cornerRadius(16)
-                .environmentObject(state)
+        let rootView = TeleprompterView(onClose: { [weak self] in
+            self?.hidePanel()
+        })
+        .environmentObject(state)
+
+        let hostingController = NSHostingController(rootView: rootView)
+        hostingController.view.frame = NSRect(
+            x: 0, y: 0,
+            width: TelenotchPanel.width,
+            height: TelenotchPanel.height
         )
-        panel.contentViewController = placeholder
+        panel.contentViewController = hostingController
     }
 
     @objc private func togglePanel() {
