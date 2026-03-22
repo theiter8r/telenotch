@@ -9,8 +9,8 @@
 - [x] Mirror mode
 - [x] 5 color themes
 - [ ] Keyboard shortcuts (Space, arrows, R, Esc)
-- [ ] Top/bottom gradient fade on scroll area
-- [ ] Drag-and-drop / import .txt files
+- [x] Top/bottom gradient fade on scroll area
+- [x] Drag-and-drop / import .txt files
 - [ ] Visual polish and rounded corners
 - [x] Persistence (UserDefaults for speed, fontSize, theme, script)
 - [ ] Final cleanup and README
