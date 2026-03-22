@@ -1,0 +1,24 @@
+name: Telenotch
+options:
+  bundleIdPrefix: com.raajpatkar
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+
+targets:
+  Telenotch:
+    type: application
+    platform: macOS
+    sources:
+      - path: Telenotch
+    info:
+      path: Telenotch/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.raajpatkar.telenotch
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        SWIFT_VERSION: "5.9"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        ENABLE_HARDENED_RUNTIME: YES
+        INFOPLIST_FILE: Telenotch/Info.plist

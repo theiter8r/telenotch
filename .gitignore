@@ -1,0 +1,21 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+
+# Swift
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+
+# CocoaPods (unused but safe)
+Pods/
+
+# XcodeGen internals (project.yml is committed, xcodeproj user data is not)
+Telenotch.xcodeproj/project.xcworkspace/
+Telenotch.xcodeproj/xcuserdata/
