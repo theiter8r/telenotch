@@ -4,6 +4,9 @@ options:
   deploymentTarget:
     macOS: "13.0"
   xcodeVersion: "15.0"
+  settings:
+    base:
+      SWIFT_VERSION: "5.9"
 
 targets:
   Telenotch:
@@ -13,6 +16,12 @@ targets:
       - path: Telenotch
     info:
       path: Telenotch/Info.plist
+      properties:
+        LSUIElement: YES
+        LSMinimumSystemVersion: "13.0"
+        NSPrincipalClass: NSApplication
+        NSHighResolutionCapable: YES
+        CFBundleDisplayName: Telenotch
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.raajpatkar.telenotch
