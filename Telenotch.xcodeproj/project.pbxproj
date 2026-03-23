@@ -12,7 +12,6 @@
 		63F6FBFC5519847174C6433C /* TelenotchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007BF5154B76736152AE18B /* TelenotchPanel.swift */; };
 		6685CB24180A7E9F985C151C /* ScrollingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71434E4B5CDA11BD3C0B24ED /* ScrollingTextView.swift */; };
 		9E100B0F8FFEC5A605CA3260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CD7E99C4952969D72A87FF /* Assets.xcassets */; };
-		C4F2C9158F3AD1A6B4B15FC9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20024DA031FF6863759871 /* main.swift */; };
 		C5EA5CB9DF78F0FAABFA375F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4A33596D7D34E44B45F5D /* Theme.swift */; };
 		CFE7B39BC7B61F1FCDA05E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2DB99AAA48C419D9FDBB9 /* AppDelegate.swift */; };
 		F9B054A0AB7A838ABA42C746 /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E80D7A50838C706B659BDB /* ControlBar.swift */; };
@@ -24,7 +23,6 @@
 		541DBC7CD55577A7475093CD /* TeleprompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterView.swift; sourceTree = "<group>"; };
 		71434E4B5CDA11BD3C0B24ED /* ScrollingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingTextView.swift; sourceTree = "<group>"; };
 		8007BF5154B76736152AE18B /* TelenotchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelenotchPanel.swift; sourceTree = "<group>"; };
-		8C20024DA031FF6863759871 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8F95A864FC16C3E3A035C065 /* PrompterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterState.swift; sourceTree = "<group>"; };
 		90B6193F59BB170E5E49709D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9B477F728632EF29FB4A3258 /* Telenotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telenotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +54,6 @@
 				36CD7E99C4952969D72A87FF /* Assets.xcassets */,
 				D8E80D7A50838C706B659BDB /* ControlBar.swift */,
 				90B6193F59BB170E5E49709D /* Info.plist */,
-				8C20024DA031FF6863759871 /* main.swift */,
 				8F95A864FC16C3E3A035C065 /* PrompterState.swift */,
 				71434E4B5CDA11BD3C0B24ED /* ScrollingTextView.swift */,
 				8007BF5154B76736152AE18B /* TelenotchPanel.swift */,
@@ -144,7 +141,6 @@
 				63F6FBFC5519847174C6433C /* TelenotchPanel.swift in Sources */,
 				1FAD4FEC6529F3F1FE524E9F /* TeleprompterView.swift in Sources */,
 				C5EA5CB9DF78F0FAABFA375F /* Theme.swift in Sources */,
-				C4F2C9158F3AD1A6B4B15FC9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
